@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+</head>
+<body class="bg-light" >
+    <style>
+      
+      .jumbotron-fluid
+      {
+          background-image:url("https://images.unsplash.com/photo-1516102566065-39369725e4f3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+          background-size: cover;
+          height: 940px;
+          text-align: center;
+          border-bottom: 1px solid #53684a;
+         
+      }
+      .jumbotron-fluid h1.display-4
+      {
+        color:white;
+          margin-top: 250px;
+          font-family: 'Courier New', Courier, monospace;
+      }
+      
+      hr.my-4
+      {
+      width:160px;
+      border:1px solid #dc3545; 
+      }
+     
+     
+    
+     .map-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+
+
+    </style>
+    
+
+      <div class="jumbotron jumbotron-fluid ">
+        <h1 class="display-4">Hello, Flower!</h1>
+        <hr class="my-4 mt-n2 ">
+
+        <nav class="navbar navbar-light sticky-top ">
+            <form class="form-inline  mx-auto">
+              <button class="btn btn-sm btn-outline-light mr-1" type="button"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" fill="currentColor" class="bi bi-house-door mt-n1 mr-1" viewBox="0 0 16 16">
+                <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+              </svg>Home</button>
+              <button class="btn btn-sm btn-outline-light mr-1" type="button"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" fill="currentColor" class="bi bi-file-earmark-person mt-n1 mr-1" viewBox="0 0 16 16">
+                <path d="M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2v9.255S12 12 8 12s-5 1.755-5 1.755V2a1 1 0 0 1 1-1h5.5v2z"/>
+              </svg>About</button>
+              <button class="btn btn-sm btn-outline-light mr-1" type="button"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" fill="currentColor" class="bi bi-cart4 mt-n1 mr-1" viewBox="0 0 16 16">
+                <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+              </svg>
+              Carts</button>
+              <button class="btn btn-sm btn-outline-light mr-1" type="button">  
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope mt-n1 " viewBox="0 0 16 16">
+                  <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383l-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>
+                </svg>
+              Contact</button>
+              <button class="btn btn-sm btn-outline-light" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt mt-n1 mr-1" viewBox="0 0 16 17">
+                <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+              </svg>Maps</button>
+            </form>
+          </nav>
+
+
+      </div>
+
+
+
+
+     
+
+
+
+
+
+
+
+
+      <div class="card mb-3  shadow  bg-white   bg-white mx-auto" style="max-width: 540px;  border:1px solid  #9e9e9e; margin-top:-180px; border-radius: 5px;">
+        <div class="row no-gutters">
+          <div class="col-md-4 ">
+            <img src="https://images.unsplash.com/photo-1527061011665-3652c757a4d4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=633&q=80"  width="190px" height="300px" class=" rounded-left" >
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+
+      <div class="container-fluid text-center  mt-n3 pt-4 pl-5 pr-5 pb-4  " > <h3>Happiness</h3>
+   <p class="text-center ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius, velit voluptatum assumenda earum commodi id. Quia incidunt
+   facere harum iure, voluptatem eum ullam totam pariatur alias cupiditate at iusto asperiores. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, aperiam harum incidunt sunt esse eligendi minus optio possimus 
+   totam voluptatibus velit non officiis natus ipsa dolores! Fugiat sed distinctio quaerat?. Lorem ipsum dolor sit amet consectetur adipisicing elit. Et iusto, quae minima rerum in voluptate corrupti voluptatum optio? Pariatur 
+   adipisci rem necessitatibus tempore sint omnis quasi iste soluta, aspernatur dignissimos.
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam adipisci fugit quibusdam ab, quidem doloribus laudantium omnis laborum repellat. 
+  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae explicabo iusto facere, commodi labore consectetur perferendis eveniet beatae 
+  consequuntur corrupti at expedita? Explicabo nulla tempora sapiente, quidem minus modi quam.
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus minima assumenda consequatur inventore adipisci, asperiores nobis fuga dicta libero magni omnis fugit repellendus est sequi. Atque reiciendis velit exercitationem odio.
+  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis voluptate quis rem distinctio vitae, accusantium nulla a iure reprehenderit nam vel, architecto laborum eaque hic laudantium minus. Et, quisquam debitis.
+ </p>
+      </div>
+      </div>
+    </div>
+
+
+
+<div class="container-fluid text-center" style="margin: auto; background-image: url(https://images.unsplash.com/photo-1598211684652-30c5fe0913ed?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=966&q=80); background-position: 0 -150px;">
+  <div class="card text-white bg-dark   mt-3 mb-3 " style="max-width:18rem;  display:inline-block; background-color:#007bff; ">
+    <div class="card-header">Header</div>
+    <div class="card-body">
+      <h5 class="card-title">Primary card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div>
+  <div class="card text-white bg-secondary mt-3 mb-3 " style="max-width: 18rem; display: inline-block;">
+    <div class="card-header">Header</div>
+    <div class="card-body">
+      <h5 class="card-title">Secondary card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div>
+  <div class="card text-white  mt-3 mb-3  bg-dark" style="max-width: 18rem; display:inline-block; ">
+    <div class="card-header">Header</div>
+    <div class="card-body">
+      <h5 class="card-title">Success card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div>
+</div>
+
+ 
+
+
+
+    
+  
+   
+
+
+    
+       <div class="container ">
+         <CENTER><h3 CLASS="mt-2">MAPS</h3></CENTER>
+        <div class=" rounded map-responsive ">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255314.40356779937!2d100.2511830082752!3d-0.9345808070681981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2fd4b942e2b117bb%3A0xb8468cb5c3046ba5!2sPadang%2C%20Kota%20Padang%2C%20Sumatera%20Barat!5e0!3m2!1sid!2sid!4v1613837822223!5m2!1sid!2sid"   width="1000px"  height="450px"  allowfullscreen="" loading="lazy" class="img-responsive rounded"  style="border:1px solid black;"></iframe>
+   </div>
+       
+      </div>
+  
+
+
+       <div class="container-fluid text-center mt-3" style="background-color:#0c0c0c1f;"> <h3 class="pt-3">Happiness</h3>
+        <p class="text-center mt-n3 pt-4 pl-5 pr-5 pb-4 ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius, velit voluptatum assumenda earum commodi id. Quia incidunt
+        facere harum iure, voluptatem eum ullam totam pariatur alias cupiditate at iusto asperiores. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, aperiam harum incidunt sunt esse eligendi minus optio possimus 
+        totam voluptatibus velit non officiis natus ipsa dolores! Fugiat sed distinctio quaerat?. Lorem ipsum dolor sit amet consectetur adipisicing elit. Et iusto, quae minima rerum in voluptate corrupti voluptatum optio? Pariatur 
+        adipisci rem necessitatibus tempore sint omnis quasi iste soluta, aspernatur dignissimos.
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam adipisci fugit quibusdam ab, quidem doloribus laudantium omnis laborum repellat. 
+      </p>
+           </div>
+           </div>
+         </div>
+    
+  
+         <!-- Footer -->
+         <footer class="page-footer font-small bg-dark mt-n4"><!--5.Footer-->
+
+          <!-- Copyright -->
+             <div class="footer-copyright text-center py-3 text-white">&copy; 2021 Copyright:Bela Eka Putri
+             </div>
+             <!-- Copyright -->
+           
+       </footer>
+
+
+
+ 
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+</body>
+</html>
